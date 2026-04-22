@@ -1,0 +1,119 @@
+.navbar {
+    background-color: #000000 !important;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    padding: 10px 30px;
+    border-bottom: 2px solid #c9a227;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Forzar que el contenedor separe los bloques */
+.navbar-collapse {
+    display: flex !important;
+}
+
+/* Links navbar */
+.navbar .nav-link {
+    color: white !important;
+    font-weight: 500;
+    margin-left: 15px;
+    font-family: 'Montserrat', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+    color: gold !important;
+    transform: scale(1.1);
+}
+
+/* Dropdown */
+.navbar .dropdown-menu {
+    background-color: #111;
+    border: 1px solid #c9a227;
+}
+
+.navbar .dropdown-item {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    transition: 0.3s;
+}
+
+.navbar .dropdown-item:hover {
+    background-color: gold;
+    color: black;
+    padding-left: 20px;
+}
+
+/* Botones derecha */
+.nav-buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* ESTO EMPUJA LOS BOTONES A LA DERECHA */
+    margin-left: auto !important; 
+}
+
+.btn-login,
+.btn-register {
+    text-decoration: none !important;
+    padding: 8px 15px;
+    border-radius: 25px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+/* Login */
+.btn-login {
+    color: white !important;
+    border: 1px solid gold;
+}
+
+.btn-login:hover {
+    background: gold;
+    color: black !important;
+    transform: scale(1.05);
+}
+
+/* Register */
+.btn-register {
+    background: gold;
+    color: black !important;
+    font-weight: bold;
+}
+
+.btn-register:hover {
+    background: white;
+    color: black !important;
+    transform: scale(1.05);
+}
+
+/* Iconos */
+.btn-login i,
+.btn-register i {
+    margin-right: 5px;
+}
+
+/* Logo */
+.navbar-brand img {
+    transition: transform 0.3s ease;
+}
+
+.navbar-brand img:hover {
+    transform: scale(1.08);
+}
+
+/* Responsivo para móviles */
+@media (max-width: 991px) {
+    .nav-buttons {
+        margin-left: 0 !important;
+        margin-top: 15px;
+        flex-direction: column;
+        width: 100%;
+    }
+    .btn-login, .btn-register {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+}
