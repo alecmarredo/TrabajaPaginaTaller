@@ -6,9 +6,9 @@
     transition: all 0.3s ease-in-out;
 }
 
-/* Forzar que el contenedor separe los bloques */
 .navbar-collapse {
     display: flex !important;
+    align-items: center;
 }
 
 /* Links navbar */
@@ -43,13 +43,57 @@
     padding-left: 20px;
 }
 
+/* Barra de búsqueda */
+.search-box {
+    display: flex;
+    align-items: center;
+    background: #111;
+    border: 1px solid gold;
+    border-radius: 25px;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+.search-box input {
+    border: none;
+    outline: none;
+    background: transparent;
+    color: white;
+    padding: 8px 15px;
+    width: 180px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.search-box input::placeholder {
+    color: #bbb;
+}
+
+.search-box button {
+    border: none;
+    background: gold;
+    color: black;
+    padding: 8px 15px;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-box button:hover {
+    background: white;
+}
+
+.search-box button i {
+    font-size: 16px;
+}
+
 /* Botones derecha */
 .nav-buttons {
     display: flex;
     align-items: center;
     gap: 10px;
-    /* ESTO EMPUJA LOS BOTONES A LA DERECHA */
-    margin-left: auto !important; 
 }
 
 .btn-login,
@@ -63,7 +107,6 @@
     white-space: nowrap;
 }
 
-/* Login */
 .btn-login {
     color: white !important;
     border: 1px solid gold;
@@ -75,7 +118,6 @@
     transform: scale(1.05);
 }
 
-/* Register */
 .btn-register {
     background: gold;
     color: black !important;
@@ -86,6 +128,46 @@
     background: white;
     color: black !important;
     transform: scale(1.05);
+}
+
+/* Carrito */
+.btn-cart {
+    position: relative;
+    background: gold;
+    color: black !important;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none !important;
+    transition: all 0.3s ease;
+}
+
+.btn-cart:hover {
+    background: white;
+    transform: scale(1.08);
+}
+
+.btn-cart i {
+    font-size: 18px;
+}
+
+.cart-count {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: red;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Iconos */
@@ -103,17 +185,34 @@
     transform: scale(1.08);
 }
 
-/* Responsivo para móviles */
+/* Responsive */
 @media (max-width: 991px) {
+    .navbar-collapse {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .search-box {
+        margin: 15px 0;
+        width: 100%;
+    }
+
+    .search-box input {
+        width: 100%;
+    }
+
     .nav-buttons {
-        margin-left: 0 !important;
         margin-top: 15px;
         flex-direction: column;
         width: 100%;
     }
-    .btn-login, .btn-register {
+
+    .btn-login,
+    .btn-register,
+    .btn-cart {
         width: 100%;
         text-align: center;
         margin-bottom: 10px;
+        justify-content: center;
     }
 }
