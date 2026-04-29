@@ -7,7 +7,6 @@
 }
 
 .navbar-collapse {
-    display: flex !important;
     align-items: center;
 }
 
