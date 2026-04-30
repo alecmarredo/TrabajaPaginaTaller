@@ -1,8 +1,32 @@
-<div class="card">
-  <img src="assets/IMG_5312.jpeg" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Buzo Jordan Negro Original</h5>
-    <p class="card-text">Buzo premium de algodón, cómodo y elegante para cualquier ocasión.</p>
-    <a href="#" class="btn btn-primary">Agregar al carrito</a>
-  </div>
+
+
+<div class="container">
+    <div class="row">
+
+        <div *ngFor="let i of infoIndumentaria" class="col-lg-3 col-md-6 col-sm-12 col-xs-12 mb-4">
+
+            <div class="card">
+                <img src="{{i.img}}" class="card-img-top" alt="{{i.alt}}">
+
+                <div class="card-body">
+                    <h5 class="card-title">{{i.titulo}}</h5>
+                    <p class="card-text">
+                        {{i.descripcion}}
+                    </p>
+
+                    <p class="card-text">
+                        {{i.descripcion2}}
+                    </p>
+
+                    <p class="card-text">
+                        ${{i.precio}}
+                    </p>
+                    <a href="#" class="btn btn-primary">Añadir al carrito</a>
+
+
+                </div>
+            </div>
+        </div>
+
+    </div>
 </div>
