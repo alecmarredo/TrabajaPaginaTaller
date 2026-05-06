@@ -17,12 +17,12 @@ export class Productos {
   this.infoIndumentaria = [
     {
     id: 1,
-    titulo: "Buzo Jordan Negro Original",
+    titulo: "Buzo Negro Armani Exchange Original",
     categoria: "Buzos",
     descripcion: "Buzo premium de algodón, cómodo y elegante para cualquier ocasión.",
     descripcion2: "Observacion: Modelo muy lindo que nunca falla, original y con buen fit.",
-    img: "assets/IMG_5312.jpeg",
-    alt: "Buzo Jordan Negro Original",
+    img: "assets/buzo cnguro ax.jpeg",
+    alt: "Buzo Negro Armani Exchange Original",
     precio: 44.99,
     },
 
@@ -32,9 +32,31 @@ export class Productos {
     categoria: "Buzos",
     descripcion: "Talla: M fit S",
     descripcion2: "Observacion: Modelo muy lindo que nunca falla, original y con buen fit.",
-    img: "assets/IMG_5312.jpeg",
-    alt: "Buzo Jordan Negro Original",
-    precio: 44.99,
+    img: "assets/buzo champion canguro.jpeg",
+    alt: "Buzo Champion Gris Original",
+    precio: 39.99,
+    },
+
+    {
+    id:3,
+    titulo: "Buzo Boss Negro Redondo Original",
+    categoria: "Buzos",
+    descripcion: "Talla: M fit S",
+    descripcion2: "Observacion: Modelo muy lindo que nunca falla, original y con buen fit.",
+    img: "assets/buzo cuello redondo boss.jpeg",
+    alt: "Buzo Boss Negro Redondo Original",
+    precio: 20.99,
+    },
+
+    {
+    id:4,
+    titulo: "Buzo Boss Negro Canguro Original",
+    categoria: "Buzos",
+    descripcion: "Talla: M fit S",
+    descripcion2: "Observacion: Modelo muy lindo que nunca falla, original y con buen fit.",
+    img: "assets/buzo canguro boss.jpeg",
+    alt: "Buzo Boss Negro Canguro Original",
+    precio: 20.99,
     },
 
   ]
