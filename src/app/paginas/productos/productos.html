@@ -1,37 +1,83 @@
 <div class="container mt-5">
   <div class="row">
 
-    <div *ngFor="let i of infoIndumentaria" 
-         class="col-lg-3 col-md-6 col-sm-12 mb-4">
+    @for (i of infoIndumentaria; track i.id) {
 
-      <div class="card h-100">
+      <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
 
-        <img [src]="i.img" class="card-img-top" [alt]="i.alt">
+        <div class="card h-100">
 
-        <div class="card-body d-flex flex-column">
+          <!-- Badge oferta -->
+          @if (i.enOferta) {
 
-          <h5 class="card-title">{{i.titulo}}</h5>
+            <span class="offer-badge">
+              🔥 OFERTA
+            </span>
 
-          <p class="card-text">
-            {{i.descripcion}}
-          </p>
+          } @else {
 
-          <p class="card-text">
-            {{i.descripcion2}}
-          </p>
+            <span class="normal-badge">
+              Nuevo
+            </span>
 
-          <p class="price">
-            ${{i.precio}}
-          </p>
+          }
 
-          <a href="#" class="btn btn-primary mt-auto">
-            Añadir al carrito
-          </a>
+          <!-- Imagen -->
+          <img
+            [src]="i.img"
+            class="card-img-top"
+            [alt]="i.alt"
+          >
 
+          <!-- Body -->
+          <div class="card-body d-flex flex-column">
+
+            <h5 class="card-title">
+              {{ i.titulo }}
+            </h5>
+
+            <p class="card-text">
+              {{ i.descripcion }}
+            </p>
+
+            <p class="card-text">
+              {{ i.descripcion2 }}
+            </p>
+
+            <!-- Precio -->
+            @if (i.enOferta && i.precioOferta) {
+
+              <div class="prices">
+
+                <span class="old-price">
+                  ${{ i.precio.toLocaleString() }}
+                </span>
+
+                <span class="new-price">
+                  ${{ i.precioOferta.toLocaleString() }}
+                </span>
+
+              </div>
+
+            } @else {
+
+              <p class="price">
+                ${{ i.precio.toLocaleString() }}
+              </p>
+
+            }
+
+            <!-- Botón -->
+            <a href="#" class="btn btn-primary mt-auto">
+              Añadir al carrito
+            </a>
+
+          </div>
         </div>
+
       </div>
 
-    </div>
+    }
 
   </div>
 </div>

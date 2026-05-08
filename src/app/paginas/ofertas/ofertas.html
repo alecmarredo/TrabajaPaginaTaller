@@ -1,20 +1,87 @@
-<div class="offer-card">
-    
-    <span class="offer-badge">🔥 OFERTA</span>
+<div class="offers-container">
 
-    <img src="assets/IMG_5312.jpeg" alt="Producto" class="offer-img">
+    @for (descuento of infoDescuento; track descuento.id) {
 
-    <div class="offer-info">
-        <h3>Buzo Jordan Negro</h3>
+        <div class="offer-card">
 
-        <div class="price-box">
-            <span class="old-price">$45.000</span>
-            <span class="new-price">$30.000</span>
+            <!-- Badge -->
+            @if (descuento.enOferta) {
+
+                <span class="offer-badge">
+                    🔥 OFERTA
+                </span>
+
+            } @else {
+
+                <span class="normal-badge">
+                    Nuevo
+                </span>
+
+            }
+
+            <!-- Imagen -->
+            <img
+                [src]="descuento.img"
+                [alt]="descuento.alt"
+                class="offer-img"
+            >
+
+            <!-- Info -->
+            <div class="offer-body">
+
+                <h3 class="offer-title">
+                    {{ descuento.titulo }}
+                </h3>
+
+                <p class="offer-description">
+                    {{ descuento.descripcion }}
+                </p>
+
+                <p class="offer-description">
+                    {{ descuento.descripcion2 }}
+                </p>
+
+                <!-- Precios -->
+                <div class="prices">
+
+                    @if (descuento.enOferta) {
+
+                        <span class="old-price">
+                            ${{ descuento.precioViejo.toLocaleString() }}
+                        </span>
+
+                        <span class="new-price">
+                            ${{ descuento.precioNuevo.toLocaleString() }}
+                        </span>
+
+                    } @else {
+
+                        <span class="normal-price">
+                            ${{ descuento.precioViejo.toLocaleString() }}
+                        </span>
+
+                    }
+
+                </div>
+
+                <!-- Descuento -->
+                @if (descuento.enOferta) {
+
+                    <p class="discount">
+                        {{ descuento.descuento }} OFF
+                    </p>
+
+                }
+
+                <!-- Botón -->
+                <a href="#" class="btn-offer">
+                    Añadir al carrito
+                </a>
+
+            </div>
+
         </div>
 
-        <p class="discount">33% OFF</p>
-
-        <a href="#" class="btn-offer">Comprar ahora</a>
-    </div>
+    }
 
 </div>
