@@ -1,0 +1,126 @@
+.cart-title {
+    color: gold;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+/* TABLA */
+
+.cart-table {
+    background: #111;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid #c9a227;
+}
+
+.cart-table thead {
+    background: #1a1a1a;
+}
+
+.cart-table th {
+    color: gold !important;
+    padding: 20px !important;
+    border: none !important;
+}
+
+.cart-table td {
+    color: white;
+    padding: 20px !important;
+    border-color: #222 !important;
+    vertical-align: middle;
+}
+
+/* IMAGEN */
+
+.cart-img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* NOMBRE */
+
+.product-name {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/* CANTIDAD */
+
+.quantity-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.qty-btn {
+    width: 35px;
+    height: 35px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: gold;
+
+    color: black;
+
+    font-size: 20px;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.qty-btn:hover {
+    background: white;
+    transform: scale(1.1);
+}
+
+/* PRECIO */
+
+.price {
+    color: gold !important;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* TOTAL */
+
+.cart-total {
+    margin-top: 40px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart-total h2 {
+    color: white;
+}
+
+/* BOTÓN */
+
+.checkout-btn {
+    background: gold;
+
+    color: black;
+
+    border: none;
+
+    padding: 12px 25px;
+
+    border-radius: 30px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.checkout-btn:hover {
+    background: white;
+
+    transform: scale(1.05);
+}
