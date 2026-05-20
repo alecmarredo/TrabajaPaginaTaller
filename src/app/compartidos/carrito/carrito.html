@@ -23,88 +23,29 @@
             <!-- BODY -->
             <tbody>
 
-                <!-- ITEM -->
+                <!-- Carrito vacío -->
                 <tr>
 
-                    <!-- Imagen -->
-                    <td>
-                        <img
-                            src="assets/IMG_5312.jpeg"
-                            alt="Buzo Armani"
-                            class="cart-img"
-                        >
-                    </td>
+                    <td colspan="4" class="empty-cart">
 
-                    <!-- Nombre -->
-                    <td class="product-name">
-                        Buzo Armani Exchange Negro
-                    </td>
+                        <div class="empty-content">
 
-                    <!-- Cantidad -->
-                    <td>
+                            <i class="bi bi-cart-x"></i>
 
-                        <div class="quantity-box">
+                            <h3>
+                                Tu carrito está vacío
+                            </h3>
 
-                            <button class="qty-btn">
-                                -
-                            </button>
+                            <p>
+                                Agrega productos para comenzar tu compra.
+                            </p>
 
-                            <span>
-                                1
-                            </span>
-
-                            <button class="qty-btn">
-                                +
-                            </button>
+                            <a routerLink="/productos" class="btn-shop">
+                                Ir a productos
+                            </a>
 
                         </div>
 
-                    </td>
-
-                    <!-- Precio -->
-                    <td class="price">
-                        $39.999
-                    </td>
-
-                </tr>
-
-                <!-- ITEM -->
-                <tr>
-
-                    <td>
-                        <img
-                            src="assets/IMG_5313.jpeg"
-                            alt="Campera Adidas"
-                            class="cart-img"
-                        >
-                    </td>
-
-                    <td class="product-name">
-                        Campera Adidas Premium
-                    </td>
-
-                    <td>
-
-                        <div class="quantity-box">
-
-                            <button class="qty-btn">
-                                -
-                            </button>
-
-                            <span>
-                                2
-                            </span>
-
-                            <button class="qty-btn">
-                                +
-                            </button>
-
-                        </div>
-
-                    </td>
-
-                    <td class="price">
-                        $59.999
                     </td>
 
                 </tr>
@@ -112,20 +53,6 @@
             </tbody>
 
         </table>
-
-    </div>
-
-    <!-- TOTAL -->
-
-    <div class="cart-total">
-
-        <h2>
-            Total: $159.997
-        </h2>
-
-        <button class="checkout-btn">
-            Finalizar compra
-        </button>
 
     </div>
 
