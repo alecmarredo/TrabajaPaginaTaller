@@ -1,58 +1,82 @@
-<div class="container my-5">
+<div class="container py-5">
 
-    <h1 class="cart-title mb-4">
+    <h1 class="cart-title">
         🛒 Mi Carrito
     </h1>
 
-    <div class="table-responsive">
+    <div class="cart-container">
 
-        <table class="table cart-table align-middle">
+        @if(carritoProductos.length > 0){
 
-            <!-- HEADER -->
-            <thead>
+            @for(productos of carritoProductos; track productos.id){
 
-                <tr>
-                    <th>Producto</th>
-                    <th>Nombre</th>
-                    <th class="text-center">Cantidad</th>
-                    <th class="text-center">Precio</th>
-                </tr>
+                <div class="cart-item">
 
-            </thead>
+                    <!-- IMAGEN -->
+                    <div class="item-image">
 
-            <!-- BODY -->
-            <tbody>
+                        <img
+                            [src]="productos.imagen"
+                            [alt]="productos.nombre"
+                            class="product-img"
+                        >
 
-                <!-- Carrito vacío -->
-                <tr>
+                    </div>
 
-                    <td colspan="4" class="empty-cart">
+                    <!-- NOMBRE -->
+                    <div class="item-name">
 
-                        <div class="empty-content">
+                        {{ productos.nombre }}
 
-                            <i class="bi bi-cart-x"></i>
+                    </div>
 
-                            <h3>
-                                Tu carrito está vacío
-                            </h3>
+                    <!-- CANTIDAD -->
+                    <div class="item-quantity">
 
-                            <p>
-                                Agrega productos para comenzar tu compra.
-                            </p>
+                        <button
+                            class="qty-btn"
+                            (click)="disminuirCantidad(productos)"
+                        >
+                            -
+                        </button>
 
-                            <a routerLink="/productos" class="btn-shop">
-                                Ir a productos
-                            </a>
+                        <span class="qty-number">
 
-                        </div>
+                            {{ productos.cantidad }}
 
-                    </td>
+                        </span>
 
-                </tr>
+                        <button
+                            class="qty-btn"
+                            (click)="aumentarCantidad(productos)"
+                        >
+                            +
+                        </button>
 
-            </tbody>
+                    </div>
 
-        </table>
+                    <!-- PRECIO -->
+                    <div class="item-price">
+
+                        $ {{ productos.precio * productos.cantidad }}
+
+                    </div>
+
+                </div>
+
+            }
+
+        } @else {
+
+            <div class="empty-cart">
+
+                <h3>
+                    Tu carrito está vacío
+                </h3>
+
+            </div>
+
+        }
 
     </div>
 

@@ -2,63 +2,57 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { Indumentaria } from '../../models/indumentaria';
 
+import { carrito } from '../../servicio/carrito';
+
 @Component({
   selector: 'app-productos',
   imports: [CommonModule],
   templateUrl: './productos.html',
   styleUrl: './productos.css',
 })
+
 export class Productos {
 
   public infoIndumentaria: Indumentaria[];
 
-  constructor() {
+  constructor(
 
-  this.infoIndumentaria = [
-    {
-    id: 1,
-    titulo: "Buzo Negro Armani Exchange Original",
-    categoria: "Buzos",
-    descripcion: "Buzo premium de algodón, cómodo y elegante para cualquier ocasión.",
-    descripcion2: "Observacion: Modelo muy lindo que nunca falla, original y con buen fit.",
-    img: "assets/buzo cnguro ax.jpeg",
-    alt: "Buzo Negro Armani Exchange Original",
-    precio: 44.99,
-    },
+    private carrito: carrito
 
-    {
-    id:2,
-    titulo: "Buzo Champion Gris Original",
-    categoria: "Buzos",
-    descripcion: "Talla: M fit S",
-    descripcion2: "Observacion: Modelo muy lindo que nunca falla, original y con buen fit.",
-    img: "assets/buzo champion canguro.jpeg",
-    alt: "Buzo Champion Gris Original",
-    precio: 39.99,
-    },
+  ) {
 
-    {
-    id:3,
-    titulo: "Buzo Boss Negro Redondo Original",
-    categoria: "Buzos",
-    descripcion: "Talla: M fit S",
-    descripcion2: "Observacion: Modelo muy lindo que nunca falla, original y con buen fit.",
-    img: "assets/buzo cuello redondo boss.jpeg",
-    alt: "Buzo Boss Negro Redondo Original",
-    precio: 20.99,
-    },
+    this.infoIndumentaria = [
 
-    {
-    id:4,
-    titulo: "Buzo Boss Negro Canguro Original",
-    categoria: "Buzos",
-    descripcion: "Talla: M fit S",
-    descripcion2: "Observacion: Modelo muy lindo que nunca falla, original y con buen fit.",
-    img: "assets/buzo canguro boss.jpeg",
-    alt: "Buzo Boss Negro Canguro Original",
-    precio: 20.99,
-    },
+      {
+        id: 1,
+        titulo: "Buzo Negro Armani Exchange Original",
+        categoria: "Buzos",
+        descripcion: "Buzo premium de algodón.",
+        descripcion2: "Original y con excelente fit.",
+        img: "assets/buzo cnguro ax.jpeg",
+        alt: "Buzo Negro Armani Exchange Original",
+        precio: 1500000,
+      },
 
-  ]
+      {
+        id: 2,
+        titulo: "Buzo Champion Gris Original",
+        categoria: "Buzos",
+        descripcion: "Buzo Champion gris premium.",
+        descripcion2: "Modelo clásico y cómodo.",
+        img: "assets/buzo champion canguro.jpeg",
+        alt: "Buzo Champion Gris Original",
+        precio: 95000,
+      }
+
+    ];
+
+  }
+
+  agregarAlCarrito(productos: any){
+
+    this.carrito.agregarAlCarrito(productos);
+
+  }
+
 }
- }

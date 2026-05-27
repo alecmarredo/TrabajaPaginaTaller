@@ -1,9 +1,43 @@
 import { Component } from '@angular/core';
 
+import { carrito } from '../../servicio/carrito';
+
 @Component({
   selector: 'app-carrito',
-  imports: [],
+  standalone: true,
   templateUrl: './carrito.html',
-  styleUrl: './carrito.css',
+  styleUrls: ['./carrito.css']
 })
-export class Carrito {}
+
+export class Carrito {
+
+  carritoProductos: any[] = [];
+
+  constructor(
+
+    public carrito: carrito
+
+  ){
+
+    this.carritoProductos =
+    this.carrito.obtenerCarrito();
+
+  }
+
+  aumentarCantidad(productos: any){
+
+    productos.cantidad++;
+
+  }
+
+  disminuirCantidad(productos: any){
+
+    if(productos.cantidad > 1){
+
+      productos.cantidad--;
+
+    }
+
+  }
+
+}

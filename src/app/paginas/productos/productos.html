@@ -1,83 +1,79 @@
-<div class="container mt-5">
-  <div class="row">
+<div class="container py-5">
 
-    @for (i of infoIndumentaria; track i.id) {
+    <h1 class="cart-title">
+        🛒 Mi Carrito
+    </h1>
 
-      <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+    <div class="cart-container">
 
-        <div class="card h-100">
+        @if(carritoProductos.length > 0){
 
-          <!-- Badge oferta -->
-          @if (i.enOferta) {
+            @for(productos of carritoProductos; track productos.id){
 
-            <span class="offer-badge">
-              🔥 OFERTA
-            </span>
+                <div class="cart-item">
 
-          } @else {
+                    <div class="item-image">
 
-            <span class="normal-badge">
-              Nuevo
-            </span>
+                        <img
+                            [src]="productos.imagen"
+                            [alt]="productos.nombre"
+                            class="product-img"
+                        >
 
-          }
+                    </div>
 
-          <!-- Imagen -->
-          <img
-            [src]="i.img"
-            class="card-img-top"
-            [alt]="i.alt"
-          >
+                    <div class="item-name">
 
-          <!-- Body -->
-          <div class="card-body d-flex flex-column">
+                        {{ productos.nombre }}
 
-            <h5 class="card-title">
-              {{ i.titulo }}
-            </h5>
+                    </div>
 
-            <p class="card-text">
-              {{ i.descripcion }}
-            </p>
+                    <div class="item-quantity">
 
-            <p class="card-text">
-              {{ i.descripcion2 }}
-            </p>
+                        <button
+                            class="qty-btn"
+                            (click)="disminuirCantidad(productos)"
+                        >
+                            -
+                        </button>
 
-            <!-- Precio -->
-            @if (i.enOferta && i.precioOferta) {
+                        <span class="qty-number">
 
-              <div class="prices">
+                            {{ productos.cantidad }}
 
-                <span class="old-price">
-                  ${{ i.precio.toLocaleString() }}
-                </span>
+                        </span>
 
-                <span class="new-price">
-                  ${{ i.precioOferta.toLocaleString() }}
-                </span>
+                        <button
+                            class="qty-btn"
+                            (click)="aumentarCantidad(productos)"
+                        >
+                            +
+                        </button>
 
-              </div>
+                    </div>
 
-            } @else {
+                    <div class="item-price">
 
-              <p class="price">
-                ${{ i.precio.toLocaleString() }}
-              </p>
+                        $ {{ productos.precio * productos.cantidad }}
+
+                    </div>
+
+                </div>
 
             }
 
-            <!-- Botón -->
-            <a href="#" class="btn btn-primary mt-auto">
-              Añadir al carrito
-            </a>
+        } @else {
 
-          </div>
-        </div>
+            <div class="empty-cart">
 
-      </div>
+                <h3>
+                    Tu carrito está vacío
+                </h3>
 
-    }
+            </div>
 
-  </div>
+        }
+
+    </div>
+
 </div>
