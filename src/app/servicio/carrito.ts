@@ -6,19 +6,22 @@ import { Injectable } from '@angular/core';
 
 export class carrito {
 
-  carrito: any[] = [];
+  carrito:any[] = [];
 
-  agregarAlCarrito(productos: any) {
+  agregarAlCarrito(productos:any){
 
-    const productoExistente = this.carrito.find(
+    const productoExistente =
+    this.carrito.find(
+
       item => item.id === productos.id
+
     );
 
     if(productoExistente){
 
       productoExistente.cantidad++;
 
-    } else {
+    }else{
 
       this.carrito.push({
 
@@ -30,7 +33,7 @@ export class carrito {
 
         precio: productos.precio,
 
-        cantidad: 1
+        cantidad:1
 
       });
 
@@ -41,6 +44,16 @@ export class carrito {
   obtenerCarrito(){
 
     return this.carrito;
+
+  }
+
+  eliminarProducto(id:number){
+
+    this.carrito = this.carrito.filter(
+
+      producto => producto.id !== id
+
+    );
 
   }
 

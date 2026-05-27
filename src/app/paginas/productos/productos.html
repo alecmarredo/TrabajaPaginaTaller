@@ -1,79 +1,68 @@
-<div class="container py-5">
+<div class="container mt-5">
 
-    <h1 class="cart-title">
-        🛒 Mi Carrito
-    </h1>
+  <div class="row">
 
-    <div class="cart-container">
+    @for (productos of infoIndumentaria; track productos.id) {
 
-        @if(carritoProductos.length > 0){
+      <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
 
-            @for(productos of carritoProductos; track productos.id){
+        <div class="card product-card h-100">
 
-                <div class="cart-item">
+          <!-- IMAGEN -->
 
-                    <div class="item-image">
+          <img
+            [src]="productos.img"
+            class="card-img-top"
+            [alt]="productos.alt"
+          >
 
-                        <img
-                            [src]="productos.imagen"
-                            [alt]="productos.nombre"
-                            class="product-img"
-                        >
+          <!-- BODY -->
 
-                    </div>
+          <div class="card-body d-flex flex-column">
 
-                    <div class="item-name">
+            <h5 class="card-title">
 
-                        {{ productos.nombre }}
+              {{ productos.titulo }}
 
-                    </div>
+            </h5>
 
-                    <div class="item-quantity">
+            <p class="card-text">
 
-                        <button
-                            class="qty-btn"
-                            (click)="disminuirCantidad(productos)"
-                        >
-                            -
-                        </button>
+              {{ productos.descripcion }}
 
-                        <span class="qty-number">
+            </p>
 
-                            {{ productos.cantidad }}
+            <p class="card-text">
 
-                        </span>
+              {{ productos.descripcion2 }}
 
-                        <button
-                            class="qty-btn"
-                            (click)="aumentarCantidad(productos)"
-                        >
-                            +
-                        </button>
+            </p>
 
-                    </div>
+            <p class="price">
 
-                    <div class="item-price">
+              $ {{ productos.precio }}
 
-                        $ {{ productos.precio * productos.cantidad }}
+            </p>
 
-                    </div>
+            <!-- BOTON -->
 
-                </div>
+            <button
+              class="btn btn-warning mt-auto"
+              (click)="agregarAlCarrito(productos)"
+            >
 
-            }
+              Añadir al carrito
 
-        } @else {
+            </button>
 
-            <div class="empty-cart">
+          </div>
 
-                <h3>
-                    Tu carrito está vacío
-                </h3>
+        </div>
 
-            </div>
+      </div>
 
-        }
+    }
 
-    </div>
+  </div>
 
 </div>
