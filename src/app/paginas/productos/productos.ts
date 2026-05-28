@@ -1,77 +1,147 @@
 import { CommonModule } from '@angular/common';
+
 import { Component } from '@angular/core';
 
-import { Indumentaria } from '../../models/indumentaria';
+import { Indumentaria }
 
-import { carrito } from '../../servicio/carrito';
+from '../../models/indumentaria';
+
+import { carrito }
+
+from '../../servicio/carrito';
+
+import { favoritos }
+
+from '../../servicio/favoritos';
 
 @Component({
-  selector: 'app-productos',
-  imports: [CommonModule],
-  templateUrl: './productos.html',
-  styleUrl: './productos.css'
+
+selector:'app-productos',
+
+imports:[CommonModule],
+
+templateUrl:'./productos.html',
+
+styleUrl:'./productos.css'
+
 })
 
 export class Productos {
 
-  public infoIndumentaria: Indumentaria[];
+public infoIndumentaria:Indumentaria[];
 
-  constructor(
+constructor(
 
-    private carrito: carrito
+private carrito:carrito,
 
-  ){
+public favoritos:favoritos
 
-    this.infoIndumentaria = [
+){
 
-      {
+this.infoIndumentaria=[
 
-        id:1,
+{
 
-        titulo:"Buzo Negro Armani Exchange Original",
+id:1,
 
-        categoria:"Buzos",
+titulo:"Buzo Negro Armani Exchange Original",
 
-        descripcion:"Buzo premium algodón",
+categoria:"Buzos",
 
-        descripcion2:"Original y cómodo",
+descripcion:"Buzo premium de algodón",
 
-        img:"assets/buzo cnguro ax.jpeg",
+descripcion2:"Muy cómodo",
 
-        alt:"Buzo Armani",
+img:"assets/buzo cnguro ax.jpeg",
 
-        precio:1500000
+alt:"Armani",
 
-      },
+precio:1500000
 
-      {
+},
 
-        id:2,
+{
 
-        titulo:"Buzo Champion Gris",
+id:2,
 
-        categoria:"Buzos",
+titulo:"Buzo Champion Gris Original",
 
-        descripcion:"Champion original",
+categoria:"Buzos",
 
-        descripcion2:"Muy cómodo",
+descripcion:"Champion original",
 
-        img:"assets/buzo champion canguro.jpeg",
+descripcion2:"Muy cómodo",
 
-        alt:"Champion",
+img:"assets/buzo champion canguro.jpeg",
 
-        precio:85000
+alt:"Champion",
 
-      }
+precio:85000
 
-    ];
+},
 
-  }
+{
 
-  agregarAlCarrito(productos:any){
+id:3,
 
-    this.carrito.agregarAlCarrito(productos);
+titulo:"Buzo Boss Negro Original",
 
-  }
+categoria:"Buzos",
+
+descripcion:"Boss original",
+
+descripcion2:"Muy elegante",
+
+img:"assets/buzo cuello redondo boss.jpeg",
+
+alt:"Boss",
+
+precio:120000
+
+}
+
+];
+
+}
+
+agregarAlCarrito(productos:any){
+
+this.carrito.agregarAlCarrito(
+
+productos
+
+);
+
+}
+
+toggleFavorito(productos:any){
+
+if(
+
+this.favoritos.estaEnFavoritos(
+
+productos.id
+
+)
+
+){
+
+this.favoritos.eliminarFavorito(
+
+productos.id
+
+);
+
+}else{
+
+this.favoritos.agregarFavorito(
+
+productos
+
+);
+
+}
+
+}
 
 }

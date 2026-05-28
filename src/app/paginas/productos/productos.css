@@ -1,32 +1,16 @@
-/* CONTENEDOR */
-
-.container{
-
-padding-bottom:60px;
-
-}
-
-/* CARD */
-
 .product-card{
 
 position:relative;
 
 background:#111;
 
-border:1px solid #c9a227;
+border:1px solid gold;
 
-border-radius:18px;
+border-radius:20px;
 
 overflow:hidden;
 
-transition:.3s ease;
-
-width:100%;
-
-box-shadow:
-
-0 4px 15px rgba(0,0,0,.4);
+transition:.3s;
 
 }
 
@@ -36,178 +20,106 @@ transform:translateY(-8px);
 
 box-shadow:
 
-0 8px 25px rgba(201,162,39,.3);
+0 8px 25px
+
+rgba(255,215,0,.25);
 
 }
-
-/* IMAGEN */
 
 .card-img-top{
 
-width:100%;
-
-height:300px;
+height:320px;
 
 object-fit:cover;
 
-display:block;
-
 }
-
-/* BODY */
 
 .card-body{
 
-padding:20px;
-
 text-align:center;
 
-}
+padding:25px;
 
-/* TITULO */
+}
 
 .card-title{
 
 color:white;
 
-font-size:26px;
-
-margin-bottom:12px;
+font-size:24px;
 
 font-weight:bold;
 
 }
-
-/* DESCRIPCION */
 
 .card-text{
 
 color:#bbb;
 
-font-size:15px;
-
-margin-bottom:10px;
-
 }
 
-/* PRECIO */
-
 .price{
-
-color:gold;
 
 font-size:34px;
 
 font-weight:bold;
 
+color:gold;
+
 margin:20px 0;
 
 }
 
-/* BOTON */
-
 .btn-warning{
-
-display:inline-block !important;
 
 background:gold !important;
 
-color:black !important;
-
 border:none !important;
-
-padding:12px 24px !important;
-
-border-radius:30px !important;
-
-font-weight:bold !important;
-
-transition:.3s !important;
-
-}
-
-.btn-warning:hover{
-
-background:white !important;
-
-color:black !important;
-
-transform:scale(1.05);
-
-}
-
-/* OFERTA */
-
-.offer-badge{
-
-position:absolute;
-
-top:15px;
-
-left:15px;
-
-background:red;
-
-color:white;
-
-font-size:12px;
 
 font-weight:bold;
 
-padding:6px 12px;
+border-radius:30px;
 
-border-radius:20px;
-
-z-index:100;
+padding:12px;
 
 }
 
-/* NUEVO */
-
-.normal-badge{
+.favorite-icon{
 
 position:absolute;
 
 top:15px;
 
-left:15px;
+right:15px;
+
+width:50px;
+
+height:50px;
+
+border:none;
+
+border-radius:50%;
+
+background:#111;
+
+color:gold;
+
+font-size:28px;
+
+cursor:pointer;
+
+z-index:100;
+
+transition:.3s;
+
+}
+
+.favorite-icon:hover{
 
 background:gold;
 
 color:black;
 
-font-size:12px;
-
-font-weight:bold;
-
-padding:6px 12px;
-
-border-radius:20px;
-
-z-index:100;
-
-}
-
-/* RESPONSIVE */
-
-@media(max-width:768px){
-
-.card-img-top{
-
-height:240px;
-
-}
-
-.card-title{
-
-font-size:22px;
-
-}
-
-.price{
-
-font-size:28px;
-
-}
+transform:scale(1.1);
 
 }

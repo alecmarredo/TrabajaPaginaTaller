@@ -1,91 +1,329 @@
 <nav class="navbar navbar-expand-lg navbar-dark">
-  <!-- Logo -->
-  <a class="navbar-brand" routerLink="/">
-    <img src="assets/Logo pagina png.png" alt="Logo" width="100px">
+
+  <!-- LOGO -->
+
+  <a
+
+  class="navbar-brand"
+
+  routerLink="/"
+
+  >
+
+    <img
+
+    src="assets/Logo pagina png.png"
+
+    alt="Logo"
+
+    width="100px"
+
+    >
+
   </a>
 
-  <!-- Botón responsive -->
-  <button class="navbar-toggler" 
-          type="button" 
-          data-bs-toggle="collapse" 
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" 
-          aria-expanded="false" 
-          aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
+  <!-- BOTON RESPONSIVE -->
+
+  <button
+
+  class="navbar-toggler"
+
+  type="button"
+
+  data-bs-toggle="collapse"
+
+  data-bs-target="#navbarSupportedContent"
+
+  >
+
+    <span class="navbar-toggler-icon">
+
+    </span>
+
   </button>
 
-  <!-- Contenido -->
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <!-- CONTENIDO -->
 
-    <!-- Links -->
+  <div
+
+  class="collapse navbar-collapse"
+
+  id="navbarSupportedContent"
+
+  >
+
+    <!-- LINKS -->
+
     <ul class="navbar-nav me-auto">
-      <li class="nav-item">
-        <a class="nav-link active" routerLink="/">Inicio</a>
-      </li>
+
+      <!-- INICIO -->
 
       <li class="nav-item">
-        <a class="nav-link" routerLink="/ofertas">Ofertas</a>
-      </li>
 
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" 
-           href="#" 
-           id="navbarDropdown" 
-           role="button"
-           data-bs-toggle="dropdown" 
-           aria-expanded="false">
-          Productos
+        <a
+
+        class="nav-link active"
+
+        routerLink="/"
+
+        >
+
+          Inicio
+
         </a>
 
-        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <li><a class="dropdown-item" routerLink="/productos">Buzos</a></li>
-          <li><a class="dropdown-item" routerLink="/productos">Remeras</a></li>
-          <li><a class="dropdown-item" routerLink="/productos">Camperas</a></li>
-          <li><a class="dropdown-item" routerLink="/productos">Calzado</a></li>
-          <li><a class="dropdown-item" routerLink="/productos">Accesorios</a></li>
-          <li><hr class="dropdown-divider"></li>
-        </ul>
       </li>
+
+      <!-- OFERTAS -->
 
       <li class="nav-item">
-        <a class="nav-link" routerLink="/contacto">Contacto</a>
+
+        <a
+
+        class="nav-link"
+
+        routerLink="/ofertas"
+
+        >
+
+          Ofertas
+
+        </a>
+
       </li>
+
+      <!-- FAVORITOS NUEVO -->
+
+      <li class="nav-item">
+
+        <a
+
+        class="nav-link"
+
+        routerLink="/favoritos"
+
+        >
+
+          <i class="fas fa-heart">
+
+          </i>
+
+          Favoritos
+
+        </a>
+
+      </li>
+
+      <!-- PRODUCTOS -->
+
+      <li class="nav-item dropdown">
+
+        <a
+
+        class="nav-link dropdown-toggle"
+
+        href="#"
+
+        data-bs-toggle="dropdown"
+
+        >
+
+          Productos
+
+        </a>
+
+        <ul class="dropdown-menu">
+
+          <li>
+
+            <a
+
+            class="dropdown-item"
+
+            routerLink="/productos"
+
+            >
+
+              Buzos
+
+            </a>
+
+          </li>
+
+          <li>
+
+            <a
+
+            class="dropdown-item"
+
+            routerLink="/productos"
+
+            >
+
+              Remeras
+
+            </a>
+
+          </li>
+
+          <li>
+
+            <a
+
+            class="dropdown-item"
+
+            routerLink="/productos"
+
+            >
+
+              Camperas
+
+            </a>
+
+          </li>
+
+          <li>
+
+            <a
+
+            class="dropdown-item"
+
+            routerLink="/productos"
+
+            >
+
+              Calzado
+
+            </a>
+
+          </li>
+
+          <li>
+
+            <a
+
+            class="dropdown-item"
+
+            routerLink="/productos"
+
+            >
+
+              Accesorios
+
+            </a>
+
+          </li>
+
+        </ul>
+
+      </li>
+
+      <!-- CONTACTO -->
+
+      <li class="nav-item">
+
+        <a
+
+        class="nav-link"
+
+        routerLink="/contacto"
+
+        >
+
+          Contacto
+
+        </a>
+
+      </li>
+
     </ul>
 
-    <!-- Barra búsqueda -->
+    <!-- BUSCADOR -->
+
     <form class="search-box">
-      <input type="text" placeholder="Buscar productos...">
+
+      <input
+
+      type="text"
+
+      placeholder="Buscar productos..."
+
+      >
+
       <button type="submit">
-        <i class="fas fa-magnifying-glass"></i>
+
+        <i class="fas fa-magnifying-glass">
+
+        </i>
+
       </button>
+
     </form>
 
-    <!-- Botones -->
+    <!-- BOTONES DERECHA -->
+
     <div class="nav-buttons">
 
-      <!-- Favoritos -->
-      <a routerLink="/favoritos" class="btn-fav">
-        <i class="fas fa-heart"></i>
+      <!-- LOGIN -->
+
+      <a
+
+      routerLink="/inicioSesion"
+
+      class="btn-login"
+
+      >
+
+        <i class="fas fa-user">
+
+        </i>
+
+        Iniciar sesión
+
       </a>
 
-      <!-- Login -->
-      <a routerLink="/inicioSesion" class="btn-login">
-        <i class="fas fa-user"></i> Iniciar sesión
+      <!-- REGISTRO -->
+
+      <a
+
+      routerLink="/registro"
+
+      class="btn-register"
+
+      >
+
+        <i class="fas fa-user-plus">
+
+        </i>
+
+        Registrarse
+
       </a>
 
-      <!-- Registro -->
-      <a routerLink="/registro" class="btn-register">
-        <i class="fas fa-user-plus"></i> Registrarse
-      </a>
+      <!-- CARRITO -->
 
-      <!-- Carrito -->
-      <a routerLink="/carrito" class="btn-cart">
-        <i class="fas fa-shopping-cart"></i>
-        <span class="cart-count">0</span>
+      <a
+
+      routerLink="/carrito"
+
+      class="btn-cart"
+
+      >
+
+        <i class="fas fa-shopping-cart">
+
+        </i>
+
+        <span class="cart-count">
+
+          0
+
+        </span>
+
       </a>
 
     </div>
 
   </div>
+
 </nav>

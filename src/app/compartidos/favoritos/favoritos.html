@@ -1,1 +1,88 @@
-<p>favoritos works!</p>
+<div class="container mt-5">
+
+<h1 class="cart-title">
+
+⭐ Favoritos
+
+</h1>
+
+<div class="row">
+
+@if(favoritosProductos.length > 0){
+
+@for(productos of favoritosProductos;
+track productos.id){
+
+<div class="col-lg-4 mb-4">
+
+<div class="card product-card">
+
+<img
+
+[src]="productos.img"
+
+class="card-img-top"
+
+>
+
+<div class="card-body">
+
+<h5 class="card-title">
+
+{{ productos.titulo }}
+
+</h5>
+
+<p class="price">
+
+$
+
+{{ productos.precio }}
+
+</p>
+
+<button
+
+class="btn btn-warning"
+
+(click)="comprar(productos)"
+
+>
+
+Añadir al carrito
+
+</button>
+
+<button
+
+class="favorite-icon"
+
+(click)="eliminar(productos)"
+
+>
+
+★
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+}
+
+}@else{
+
+<h2>
+
+No hay favoritos
+
+</h2>
+
+}
+
+</div>
+
+</div>
