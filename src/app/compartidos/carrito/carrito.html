@@ -52,125 +52,99 @@
 
                 @if(carritoProductos.length > 0){
 
-                    @for(productos of carritoProductos; track productos.id){
+                @for(productos of carritoProductos; track productos.id){
 
-                        <tr>
+                <tr>
 
-                            <!-- IMAGEN -->
+                    <!-- IMAGEN -->
 
-                            <td class="text-center">
+                    <td class="text-center">
 
-                                <img
+                        <img [src]="productos.imagen" [alt]="productos.nombre" class="product-img">
 
-                                [src]="productos.imagen"
+                    </td>
 
-                                [alt]="productos.nombre"
+                    <!-- NOMBRE -->
 
-                                class="product-img"
+                    <td class="product-name">
 
-                                >
+                        {{ productos.nombre }}
 
-                            </td>
+                    </td>
 
-                            <!-- NOMBRE -->
+                    <!-- CANTIDAD -->
 
-                            <td class="product-name">
+                    <td class="text-center">
 
-                                {{ productos.nombre }}
+                        <div class="quantity-box">
 
-                            </td>
+                            <button class="qty-btn" (click)="disminuirCantidad(productos)">
 
-                            <!-- CANTIDAD -->
+                                -
 
-                            <td class="text-center">
+                            </button>
 
-                                <div class="quantity-box">
+                            <span class="qty-number">
 
-                                    <button
+                                {{ productos.cantidad }}
 
-                                    class="qty-btn"
+                            </span>
 
-                                    (click)="disminuirCantidad(productos)"
+                            <button class="qty-btn" (click)="aumentarCantidad(productos)">
 
-                                    >
+                                +
 
-                                        -
+                            </button>
 
-                                    </button>
+                        </div>
 
-                                    <span class="qty-number">
+                    </td>
 
-                                        {{ productos.cantidad }}
+                    <!-- PRECIO -->
 
-                                    </span>
+                    <td class="text-center product-price">
 
-                                    <button
+                        $
 
-                                    class="qty-btn"
+                        {{ productos.precio * productos.cantidad }}
 
-                                    (click)="aumentarCantidad(productos)"
+                    </td>
 
-                                    >
+                    <!-- ELIMINAR -->
 
-                                        +
+                    <td class="text-center">
 
-                                    </button>
+                        <button class="delete-btn" (click)="eliminarProducto(productos)">
 
-                                </div>
+                            🗑
 
-                            </td>
+                        </button>
 
-                            <!-- PRECIO -->
+                    </td>
 
-                            <td class="text-center product-price">
+                </tr>
 
-                                $
-
-                                {{ productos.precio * productos.cantidad }}
-
-                            </td>
-
-                            <!-- ELIMINAR -->
-
-                            <td class="text-center">
-
-                                <button
-
-                                class="delete-btn"
-
-                                (click)="eliminarProducto(productos)"
-
-                                >
-
-                                    🗑
-
-                                </button>
-
-                            </td>
-
-                        </tr>
-
-                    }
+                }
 
                 }@else{
 
-                    <tr>
+                <tr>
 
-                        <td colspan="5">
+                    <td colspan="5">
 
-                            <div class="empty-cart">
+                        <div class="empty-cart">
 
-                                <h2>
+                            <h2>
 
-                                    Carrito vacío
+                                Carrito vacío
 
-                                </h2>
+                            </h2>
 
-                            </div>
+                        </div>
 
-                        </td>
+                    </td>
 
-                    </tr>
+                </tr>
 
                 }
 
@@ -202,11 +176,11 @@
 
             </div>
 
-            <button class="finish-btn">
+            <a routerLink="/compras" class="finish-btn">
 
                 Finalizar Compra
 
-            </button>
+            </a>
 
         </div>
 
