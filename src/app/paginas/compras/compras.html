@@ -1,203 +1,123 @@
 <div class="checkout-container">
 
-<h1>
+    <h1>
 
-Finalizar Compra
+        Finalizar Compra
 
-</h1>
+    </h1>
 
-<form
+    <form (ngSubmit)="comprar()" #formCompra="ngForm">
 
-(ngSubmit)="comprar()"
+        <div class="form-group">
 
-#formCompra="ngForm"
+            <label>
 
->
+                Nombre
 
-<div class="form-group">
+            </label>
 
-<label>
+            <input type="text" [(ngModel)]="nombre" name="nombre" required>
 
-Nombre
+        </div>
 
-</label>
+        <div class="form-group">
 
-<input
+            <label>
 
-type="text"
+                Apellido
 
-[(ngModel)]="nombre"
+            </label>
 
-name="nombre"
+            <input type="text" [(ngModel)]="apellido" name="apellido" required>
 
-required
+        </div>
 
->
+        <div class="form-group">
 
-</div>
+            <label>
 
-<div class="form-group">
+                Email
 
-<label>
+            </label>
 
-Apellido
+            <input type="email" [(ngModel)]="email" name="email" required>
 
-</label>
+        </div>
 
-<input
+        <div class="form-group">
 
-type="text"
+            <label>
 
-[(ngModel)]="apellido"
+                Teléfono
 
-name="apellido"
+            </label>
 
-required
+            <input type="text" [(ngModel)]="telefono" name="telefono" required>
 
->
+        </div>
 
-</div>
+        <div class="form-group">
 
-<div class="form-group">
+            <label>
 
-<label>
+                Dirección
 
-Email
+            </label>
 
-</label>
+            <input type="text" [(ngModel)]="direccion" name="direccion" required>
 
-<input
+        </div>
 
-type="email"
+        <div class="form-group">
 
-[(ngModel)]="email"
+            <label>
 
-name="email"
+                Ciudad
 
-required
+            </label>
 
->
+            <input type="text" [(ngModel)]="ciudad" name="ciudad" required>
 
-</div>
+        </div>
 
-<div class="form-group">
+        <div class="form-group">
 
-<label>
+            <label>
 
-Teléfono
+                Método de Pago
 
-</label>
+            </label>
 
-<input
+            <select [(ngModel)]="metodoPago" name="metodoPago" required>
 
-type="text"
+                <option>
 
-[(ngModel)]="telefono"
+                    Tarjeta
 
-name="telefono"
+                </option>
 
-required
+                <option>
 
->
+                    Mercado Pago
 
-</div>
+                </option>
 
-<div class="form-group">
+                <option>
 
-<label>
+                    Transferencia
 
-Dirección
+                </option>
 
-</label>
+            </select>
 
-<input
+        </div>
 
-type="text"
+        <button type="submit" class="buy-btn">
 
-[(ngModel)]="direccion"
+            Confirmar Compra
 
-name="direccion"
+        </button>
 
-required
-
->
-
-</div>
-
-<div class="form-group">
-
-<label>
-
-Ciudad
-
-</label>
-
-<input
-
-type="text"
-
-[(ngModel)]="ciudad"
-
-name="ciudad"
-
-required
-
->
-
-</div>
-
-<div class="form-group">
-
-<label>
-
-Método de Pago
-
-</label>
-
-<select
-
-[(ngModel)]="metodoPago"
-
-name="metodoPago"
-
-required
-
->
-
-<option>
-
-Tarjeta
-
-</option>
-
-<option>
-
-Mercado Pago
-
-</option>
-
-<option>
-
-Transferencia
-
-</option>
-
-</select>
-
-</div>
-
-<button
-
-type="submit"
-
-class="buy-btn"
-
->
-
-Confirmar Compra
-
-</button>
-
-</form>
+    </form>
 
 </div>

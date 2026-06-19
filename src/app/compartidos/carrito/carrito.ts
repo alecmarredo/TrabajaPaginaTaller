@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { RouterLink } from '@angular/router';
 import { carrito } from '../../servicio/carrito';
 
 @Component({
@@ -7,6 +7,8 @@ import { carrito } from '../../servicio/carrito';
   selector:'app-carrito',
 
   standalone:true,
+
+  imports: [RouterLink],
 
   templateUrl:'./carrito.html',
 

@@ -1,319 +1,203 @@
 <nav class="navbar navbar-expand-lg navbar-dark">
 
-    <!-- LOGO -->
+  <!-- LOGO -->
 
-    <a
+  <a class="navbar-brand" routerLink="/">
 
-    class="navbar-brand"
+    <img src="assets/Logo pagina png.png" alt="Logo" width="100">
 
-    routerLink="/"
+  </a>
 
-    >
+  <!-- BOTON RESPONSIVE -->
 
-        <img
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
 
-        src="assets/Logo pagina png.png"
+    <span class="navbar-toggler-icon">
 
-        alt="Logo"
+    </span>
 
-        width="100"
+  </button>
 
-        >
+  <!-- CONTENIDO -->
 
-    </a>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-    <!-- BOTON RESPONSIVE -->
+    <!-- LINKS -->
 
-    <button
+    <ul class="navbar-nav me-auto">
 
-    class="navbar-toggler"
+      <li class="nav-item">
 
-    type="button"
+        <a class="nav-link active" routerLink="/">
 
-    data-bs-toggle="collapse"
+          Inicio
 
-    data-bs-target="#navbarSupportedContent"
+        </a>
 
-    >
+      </li>
 
-        <span class="navbar-toggler-icon">
+      <li class="nav-item">
 
-        </span>
+        <a class="nav-link" routerLink="/ofertas">
 
-    </button>
+          Ofertas
 
-    <!-- CONTENIDO -->
+        </a>
 
-    <div
+      </li>
 
-    class="collapse navbar-collapse"
+      <!-- FAVORITOS -->
 
-    id="navbarSupportedContent"
+      <li class="nav-item">
 
-    >
+        <a class="nav-link" routerLink="/favoritos">
 
-        <!-- LINKS -->
+          Favoritos
 
-        <ul class="navbar-nav me-auto">
+        </a>
 
-            <li class="nav-item">
+      </li>
 
-                <a
+      <!-- PRODUCTOS -->
 
-                class="nav-link active"
+      <li class="nav-item dropdown">
 
-                routerLink="/"
+        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
 
-                >
+          Productos
 
-                    Inicio
+        </a>
 
-                </a>
+        <ul class="dropdown-menu">
 
-            </li>
+          <li>
 
-            <li class="nav-item">
+            <a class="dropdown-item" routerLink="/productos">
 
-                <a
+              Buzos
 
-                class="nav-link"
+            </a>
 
-                routerLink="/ofertas"
+          </li>
 
-                >
+          <li>
 
-                    Ofertas
+            <a class="dropdown-item" routerLink="/productos">
 
-                </a>
+              Remeras
 
-            </li>
+            </a>
 
-            <!-- FAVORITOS -->
+          </li>
 
-           <li class="nav-item">
+          <li>
 
-    <a
+            <a class="dropdown-item" routerLink="/productos">
 
-    class="nav-link"
+              Camperas
 
-    routerLink="/favoritos"
+            </a>
 
-    >
+          </li>
 
-        Favoritos
+          <li>
 
-    </a>
+            <a class="dropdown-item" routerLink="/productos">
 
-</li>
+              Calzado
 
-            <!-- PRODUCTOS -->
+            </a>
 
-            <li class="nav-item dropdown">
+          </li>
 
-                <a
+          <li>
 
-                class="nav-link dropdown-toggle"
+            <a class="dropdown-item" routerLink="/productos">
 
-                href="#"
+              Accesorios
 
-                data-bs-toggle="dropdown"
+            </a>
 
-                >
-
-                    Productos
-
-                </a>
-
-                <ul class="dropdown-menu">
-
-                    <li>
-
-                        <a
-
-                        class="dropdown-item"
-
-                        routerLink="/productos"
-
-                        >
-
-                            Buzos
-
-                        </a>
-
-                    </li>
-
-                    <li>
-
-                        <a
-
-                        class="dropdown-item"
-
-                        routerLink="/productos"
-
-                        >
-
-                            Remeras
-
-                        </a>
-
-                    </li>
-
-                    <li>
-
-                        <a
-
-                        class="dropdown-item"
-
-                        routerLink="/productos"
-
-                        >
-
-                            Camperas
-
-                        </a>
-
-                    </li>
-
-                    <li>
-
-                        <a
-
-                        class="dropdown-item"
-
-                        routerLink="/productos"
-
-                        >
-
-                            Calzado
-
-                        </a>
-
-                    </li>
-
-                    <li>
-
-                        <a
-
-                        class="dropdown-item"
-
-                        routerLink="/productos"
-
-                        >
-
-                            Accesorios
-
-                        </a>
-
-                    </li>
-
-                </ul>
-
-            </li>
-
-            <li class="nav-item">
-
-                <a
-
-                class="nav-link"
-
-                routerLink="/contacto"
-
-                >
-
-                    Contacto
-
-                </a>
-
-            </li>
+          </li>
 
         </ul>
 
-        <!-- BUSCADOR -->
+      </li>
 
-        <form class="search-box">
+      <li class="nav-item">
 
-            <input
+        <a class="nav-link" routerLink="/contacto">
 
-            type="text"
+          Contacto
 
-            placeholder="Buscar productos..."
+        </a>
 
-            >
+      </li>
 
-            <button type="submit">
+    </ul>
 
-                <i class="bi bi-search">
+    <!-- BUSCADOR -->
 
-                </i>
+    <form class="search-box">
 
-            </button>
+      <input type="text" placeholder="Buscar productos...">
 
-        </form>
+      <button type="submit">
 
-        <!-- BOTONES -->
+        <i class="bi bi-search">
 
-        <div class="nav-buttons">
+        </i>
 
-            <!-- LOGIN -->
+      </button>
 
-            <a
+    </form>
 
-            routerLink="/inicioSesion"
+    <!-- BOTONES -->
 
-            class="btn-login"
+    <div class="nav-buttons">
 
-            >
+      <!-- LOGIN -->
 
-                <i class="bi bi-person-fill">
+      <a routerLink="/inicioSesion" class="btn-login">
 
-                </i>
+        <i class="bi bi-person-fill">
 
-                Iniciar sesión
+        </i>
 
-            </a>
+        Iniciar sesión
 
-            <!-- REGISTRO -->
+      </a>
 
-            <a
+      <!-- REGISTRO -->
 
-            routerLink="/registro"
+      <a routerLink="/registro" class="btn-register">
 
-            class="btn-register"
+        <i class="bi bi-person-plus-fill">
 
-            >
+        </i>
 
-                <i class="bi bi-person-plus-fill">
+        Registrarse
 
-                </i>
+      </a>
 
-                Registrarse
+      <!-- CARRITO -->
 
-            </a>
+      <a routerLink="/carrito" class="btn-cart">
 
-            <!-- CARRITO -->
+        <i class="bi bi-cart-fill">
 
-            <a
+        </i>
 
-            routerLink="/carrito"
+        <span class="cart-count">
 
-            class="btn-cart"
+          0
 
-            >
+        </span>
 
-                <i class="bi bi-cart-fill">
-
-                </i>
-
-                <span class="cart-count">
-
-                    0
-
-                </span>
-
-            </a>
-
-        </div>
+      </a>
 
     </div>
+
+  </div>
 
 </nav>
