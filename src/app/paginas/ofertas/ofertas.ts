@@ -60,8 +60,49 @@ export class Ofertas {
         precioNuevo: 75000,
         descuento: '50%',
         enOferta: true,
-      }
+      },
 
+      {
+        id: 4,
+        titulo: 'Zapatillas adidas Campus 00s Hombre',
+        categoria: 'Calzado',
+        descripcion: 'Las Zapatillas adidas Campus 00s Hombre fueron diseñadas con los elementos más emblemáticos de la Campus 80s, pero vienen actualizadas con un toque skater.',
+        descripcion2: '',
+        img: 'assets/Oferta 5.jpg',
+        alt: 'Zapatillas adidas Campus 00s Hombre',
+        precioViejo: 170000,
+        precioNuevo: 85000,
+        descuento: '50%',
+        enOferta: true,
+      },
+
+      {
+        id: 5,
+        titulo: 'Camiseta Selección Argentina adidas Alternativa 26 Hombre',
+        categoria: 'Remeras',
+        descripcion: 'Llevá el orgullo de los campeones a todos lados con la Camiseta Selección Argentina adidas Alternativa 26 Hombre, una prenda que redefine la identidad nacional con un diseño moderno y audaz.',
+        descripcion2: '',
+        img: 'assets/Oferta 5 2.jpg',
+        alt: 'Camiseta Selección Argentina adidas Alternativa 26 Hombre',
+        precioViejo: 150000,
+        precioNuevo: 109500,
+        descuento: '27%',
+        enOferta: true,
+      },
+
+      {
+        id: 6,
+        titulo: 'Camiseta Argentina Le Coq Sportif Titular Colección 86',
+        categoria: 'Remeras',
+        descripcion: 'Sentí la emoción del máximo logro futbolístico con la Camiseta Argentina Le Coq Sportif Titular Colección 86, la pieza central de la Colección 86.',
+        descripcion2: '',
+        img: 'assets/Oferta 6.jpg',
+        alt: 'Camiseta Argentina Le Coq Sportif Titular Colección 86',
+        precioViejo: 129899,
+        precioNuevo: 90929,
+        descuento: '30%',
+        enOferta: true,
+      },
     ];
 
   }
