@@ -2,85 +2,81 @@
 
     @for (descuento of infoDescuento; track descuento.id) {
 
-        <div class="offer-card">
+    <div class="offer-card">
 
-            <!-- Badge -->
-            @if (descuento.enOferta) {
+        <!-- Badge -->
+        @if (descuento.enOferta) {
 
-                <span class="offer-badge">
-                    🔥 OFERTA
-                </span>
+        <span class="offer-badge">
+            🔥 OFERTA
+        </span>
 
-            } @else {
+        } @else {
 
-                <span class="normal-badge">
-                    Nuevo
-                </span>
+        <span class="normal-badge">
+            Nuevo
+        </span>
 
-            }
+        }
 
-            <!-- Imagen -->
-            <img
-                [src]="descuento.img"
-                [alt]="descuento.alt"
-                class="offer-img"
-            >
+        <!-- Imagen -->
+        <img [src]="descuento.img" [alt]="descuento.alt" class="offer-img">
 
-            <!-- Info -->
-            <div class="offer-body">
+        <!-- Info -->
+        <div class="offer-body">
 
-                <h3 class="offer-title">
-                    {{ descuento.titulo }}
-                </h3>
+            <h3 class="offer-title">
+                {{ descuento.titulo }}
+            </h3>
 
-                <p class="offer-description">
-                    {{ descuento.descripcion }}
-                </p>
+            <p class="offer-description">
+                {{ descuento.descripcion }}
+            </p>
 
-                <p class="offer-description">
-                    {{ descuento.descripcion2 }}
-                </p>
+            <p class="offer-description">
+                {{ descuento.descripcion2 }}
+            </p>
 
-                <!-- Precios -->
-                <div class="prices">
+            <!-- Precios -->
+            <div class="prices">
 
-                    @if (descuento.enOferta) {
-
-                        <span class="old-price">
-                            ${{ descuento.precioViejo.toLocaleString() }}
-                        </span>
-
-                        <span class="new-price">
-                            ${{ descuento.precioNuevo.toLocaleString() }}
-                        </span>
-
-                    } @else {
-
-                        <span class="normal-price">
-                            ${{ descuento.precioViejo.toLocaleString() }}
-                        </span>
-
-                    }
-
-                </div>
-
-                <!-- Descuento -->
                 @if (descuento.enOferta) {
 
-                    <p class="discount">
-                        {{ descuento.descuento }} OFF
-                    </p>
+                <span class="old-price">
+                    ${{ descuento.precioViejo.toLocaleString() }}
+                </span>
+
+                <span class="new-price">
+                    ${{ descuento.precioNuevo.toLocaleString() }}
+                </span>
+
+                } @else {
+
+                <span class="normal-price">
+                    ${{ descuento.precioViejo.toLocaleString() }}
+                </span>
 
                 }
 
-                <!-- Botón -->
-                <a href="#" class="btn-offer">
-                    Añadir al carrito
-                </a>
-
             </div>
 
+            <!-- Descuento -->
+            @if (descuento.enOferta) {
+
+            <p class="discount">
+                {{ descuento.descuento }} OFF
+            </p>
+
+            }
+
+            <!-- Botón -->
+            <button class="btn-offer" (click)="agregarAlCarrito(descuento)">
+                Añadir al carrito
+            </button>
+
         </div>
+
+    </div>
 
     }
 

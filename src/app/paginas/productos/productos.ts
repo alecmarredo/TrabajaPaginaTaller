@@ -44,19 +44,19 @@ this.infoIndumentaria=[
 
 id:1,
 
-titulo:"Buzo Negro Armani Exchange Original",
+titulo:"Buzo cuello redondo adidas 3 Tira Hombre",
 
 categoria:"Buzos",
 
-descripcion:"Buzo premium de algodón",
+descripcion:"Adentrate en un mundo donde el estilo se une a la comodidad con el Buzo cuello redondo adidas 3 Tira Hombre.",
 
-descripcion2:"Muy cómodo",
+descripcion2:"",
 
-img:"assets/buzo cnguro ax.jpeg",
+img:"assets/Buzo 1.jpg",
 
-alt:"Armani",
+alt:"Adidas",
 
-precio:1500000
+precio:130000
 
 },
 
@@ -64,19 +64,19 @@ precio:1500000
 
 id:2,
 
-titulo:"Buzo Champion Gris Original",
+titulo:"Buzo Jordan Brooklyn Oversized Hombre",
 
 categoria:"Buzos",
 
-descripcion:"Champion original",
+descripcion:"El Buzo Jordan Brooklyn Oversized Hombre une comodidad y estilo urbano con un corte amplio que ofrece libertad de movimiento y un look relajado. ",
 
-descripcion2:"Muy cómodo",
+descripcion2:"",
 
-img:"assets/buzo champion canguro.jpeg",
+img:"assets/Buzo 2.jpg",
 
-alt:"Champion",
+alt:"Jordan",
 
-precio:85000
+precio:180000
 
 },
 
@@ -84,19 +84,19 @@ precio:85000
 
 id:3,
 
-titulo:"Buzo Boss Negro Original",
+titulo:"Buzo Nike Club Hombre",
 
 categoria:"Buzos",
 
-descripcion:"Boss original",
+descripcion:"El Buzo Nike Club Hombre es un clásico que nunca falla: cómodo, versátil y con el estilo atemporal de Nike.",
 
-descripcion2:"Muy elegante",
+descripcion2:"",
 
-img:"assets/buzo cuello redondo boss.jpeg",
+img:"assets/Buzo 3.jpg",
 
-alt:"Boss",
+alt:"Nike",
 
-precio:120000
+precio:160000
 
 }
 
